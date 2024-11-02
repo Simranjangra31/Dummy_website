@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+         ::-webkit-scrollbar{
+        background-color: rgb(90, 217, 255);
+      }
+      ::-webkit-scrollbar-button{
+        background-color: cornsilk;
+        width: 20px;
+      }
+      ::-webkit-scrollbar-thumb{
+        background:linear-gradient(white,rgb(251, 253, 253));
+        border-radius: 10px;
+      
+        height: 5px;
+      }
+
+
+        #b{
+            display: inline-block;
+            margin: 3%;
+            padding-left:   2%;
+            padding-right: 2%;
+            /* padding-top: 0%; */
+            /* padding-bottom: 0%; */
+            /* imag-radius: 2px 2px 2px 2px; */
+
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CodeWithUs</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="login.html"> Login </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="b">
+       <marquee behavior="scroll" direction="right" scrollamount="15"> <img src="./uploads/gallery1.jpg" alt="">
+        <img src="./uploads/gallery2.jpg" alt=""></marquee>
+        <!-- <div><img src="images/gallery3.jpg" alt=""></div> -->
+    </div>
+    <div id="b">
+       <marquee behavior="scroll" scrollamount="15" direction="left"><img src="./uploads/gallery3.jpg" alt="">
+        <img src="./uploads/gallery4.jpg" alt=""></marquee> 
+        <!-- <div><img src="images/gallery3.jpg" alt=""></div> -->
+    </div>
+    <div id="b">
+      <marquee behavior="scroll" scrollamount="15" direction="right">  <img src="./uploads/gallery5.jpg" alt="">
+        <img src="./uploads/gallery6.jpg" alt=""></marquee>
+        <!-- <div><img src="images/gallery3.jpg" alt=""></div> -->
+    </div>
+
+
+</body>
+</html>

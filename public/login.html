@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+          ::-webkit-scrollbar{
+        background-color: rgb(90, 217, 255);
+      }
+      ::-webkit-scrollbar-button{
+        background-color: cornsilk;
+        width: 20px;
+      }
+      ::-webkit-scrollbar-thumb{
+        background:linear-gradient(white,rgb(251, 253, 253));
+        border-radius: 10px;
+      
+        height: 5px;
+      }
+       body{
+        background-color: #15032f;
+       }
+        input,select{
+            margin-right: 30%;
+            margin-left: 10%;
+             float: right;
+        }
+        label{
+            
+            margin-left: 30%;
+        
+           float:left ;
+        }
+        #reg{
+            justify-content: center;
+            font-weight: bolder;
+            font-size: larger;
+            font-family: 'Times New Roman', Times, serif;
+        
+        }
+        #det{
+            font-weight: bolder;
+            font-size: larger;
+            font-family: 'Times New Roman', Times, serif;
+        
+        }
+        #main{
+        background-color: aqua;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+  <center> <div id="reg">REGISTRATION FORM</div></center><br><br><br>
+    <center><div>
+   <label> Name:</label><input type="text" id="a">
+    <br><br> <label>Father's name:</label>
+    <input type="text" id="b">
+    <br><br> <label> Mother's name:</label>
+   <input type="text" id="c">
+    <br><br> <label>Phone number:</label>
+    <input type="text" id="d">
+    <br><br> <label>Email:</label>
+    <input type="text" id="e">
+    <br><br> <label>DOB</label>
+    <input style="width:16%;" type="date" id="f">
+    <br><br>
+    <label>State</label>
+  <select style="width: 17%;" id="g">
+        <option selected>None</option>
+        <option value="">HARYANA</option>
+        <option value="">PUNJAB</option>
+        <option value="">UP</option>
+        <option value="">RAJASTHAN</option>
+        <option value="">MANIPUR</option>
+        
+    </select>
+</div>
+    <br><br>
+    <center><button id="g" onclick="details()">SUBMIT</button>
+        <button id="f" onclick="reset()">RESET</button></center><br><br>
+    <div id="det"> SUBMITTED DETAILS:&nbsp;<br><span id="v" class="xyz" ></span><br>
+        <span id="w" class="xyz"></span><br><span id="x" class="xyz"></span><br><span id="y" class="xyz"></span>
+        <br><span id="z" class="xyz"></span><span id="t" class="xyz"></span>
+        <span id="u"></span>
+    </div>
+    <br><br></center>
+</div>
+    <script>
+        function details(){
+            let name=document.getElementById("a").value;
+            let fname=document.getElementById("b").value;
+            let mname=document.getElementById("c").value;
+            let num=document.getElementById("d").value;
+            let ema=document.getElementById("e").value;
+            let dob=document.getElementById("f").value;
+            let state=document.getElementById("g").value;
+
+if(name==" "){
+    alert("name field is empty");
+}
+else if(fname==" "){
+    alert("father's name field is empty");
+}
+else if(mname==" "){
+    alert("mother's name field is empty");
+}
+else if(num==" "){
+    alert("phone number field is empty");
+}
+else if(ema==" "){
+    alert("email field is empty");
+}
+else if(dob==""){
+    alert("DOB field is empty");
+}
+else if(state=="None"){
+    alert("State field is empty");
+}
+else{
+            document.getElementById("v").innerText=name;
+            document.getElementById("w").innerText=fname;
+            document.getElementById("x").innerText=mname;
+            document.getElementById("y").innerText=num;
+            document.getElementById("z").innerText=ema;
+            document.getElementById("t").innerText=dob;
+            document.getElementById("u").innerText=state;
+
+            setTimeout(function(){
+                alert("form submitted");
+            },500);
+
+document.getElementById("a").value=" ";
+document.getElementById("b").value=" ";
+document.getElementById("c").value=" ";
+document.getElementById("d").value=" ";
+document.getElementById("e").value=" ";
+document.getElementById("f").value=" ";
+document.getElementById("g").value="None";
+   
+        }
+ }
+
+function reset()
+{
+    document.getElementById("v").innerText="";
+            document.getElementById("w").innerText="";
+            document.getElementById("x").innerText="";
+            document.getElementById("y").innerText="";
+            document.getElementById("z").innerText="";
+            document.getElementById("t").innerText="";
+            document.getElementById("u").innerText="";
+            
+            setTimeout(function(){
+                alert("fill another form");
+            },500);
+}
+    </script>
+    
+</body>
+</html>
